@@ -9,5 +9,5 @@ deploy:
   - provider: bintray
     file: bintray.json
     user: khatrox
-    key: ${BINTRAY_API}
+    key: ${BINTRAY_API_KEY}
     skip_cleanup: true
