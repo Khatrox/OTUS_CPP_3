@@ -5,6 +5,7 @@ script:
    - set -e
    - cmake .
    - cmake --build .
+   - cmake --build . --target package 
 deploy:
   - provider: bintray
     file: bintray.json
