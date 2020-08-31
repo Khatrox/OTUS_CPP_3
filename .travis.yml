@@ -10,4 +10,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script: 
-  - curl -T allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ukhatrox:$BINTRAY_API_KEY https://api.bintray.com/content/khatrox/Third_Task/Third_Task_Package/$TRAVIS_BUILD_NUMBER/allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1
+  - curl -T allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ukhatrox:$BINTRAY_API_KEY https://api.bintray.com/content/khatrox/OTUS_CPP_3/OTUS_CPP_3/$TRAVIS_BUILD_NUMBER/allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1
