@@ -93,7 +93,7 @@ namespace OwnSingleLinkedList
       }
    };
 
-   template<typename T, typename Alloc = std::allocator<node<T>>>
+   template<typename T, typename Alloc = std::allocator<T>>
    struct List
    {
       List()
@@ -165,8 +165,9 @@ namespace OwnSingleLinkedList
    }
 
    private:
+      using NodeAlloc = typename Alloc::template rebind<node<T>>::other;
       node<T>* head;
-      Alloc alloc;
+      NodeAlloc alloc;
    };
 }
 
@@ -203,7 +204,7 @@ int main()
       list_with_standart_alloc.push_back(i);
   }
 
-  OwnSingleLinkedList::List<int,own_allocator<OwnSingleLinkedList::node<int>,10>> list_with_own_alloc;
+  OwnSingleLinkedList::List<int,own_allocator<int,10>> list_with_own_alloc;
   for(std::size_t i{}; i < 10; ++i)
   {
       list_with_own_alloc.push_back(i);
